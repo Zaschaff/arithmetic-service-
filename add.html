@@ -1,0 +1,25 @@
+<head>
+  <title>Simple Addition</title>
+  <script>
+  async function add(){
+  const number2Input= document.getElementById("number1")
+  const number2Input= document.getElementById("number1")
+  let n =number1Input.value;
+  let m = number2Input.value;
+  const response = await fetch("http:/localhost:3000/add/"+n+"/"+m);
+  const sum=await response.json();
+  document.getElementById("sum").innerText=sum;	
+ 
+  </script>
+</head>
+<body>
+<header> Arithmetic</header>
+  <form>
+    <input id="number1" name="number1" type="number"><br>
+    <input id="number2" name="number2" type="number"><br><br>
+    <input type="button" value="=" onclick="addNumbers()">
+    <label id="sum"></label>
+  </form>
+
+</body>
+</html>
